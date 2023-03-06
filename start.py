@@ -5,11 +5,11 @@ import json
 
 # Update package list and install required packages
 subprocess.run(['apt', 'update', '-y'])
-subprocess.run(['apt', 'install', 'unzip', 'curl', 'jq', 'xz-utils', '-y'])
+subprocess.run(['apt', 'install','xz-utils', '-y'])
 
 # Create directory for Trilium data and download database file
-os.makedirs('/root/trilium-data', exist_ok=True)
-urllib.request.urlretrieve('https://lmao.vtz.workers.dev/0:/document.db', '/root/trilium-data/document.db')
+os.makedirs('{HOME}/trilium-data', exist_ok=True)
+urllib.request.urlretrieve('https://lmao.vtz.workers.dev/0:/document.db', '{HOME}/trilium-data/document.db')
 print('Database file downloaded.')
 
 # Download and extract Trilium binary
