@@ -1,1 +1,1 @@
-web: ./trilium.sh
+web: python3 start.py
